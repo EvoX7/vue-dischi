@@ -1,23 +1,23 @@
 <template>
   <div id="app">
     <Header/>
-    <Main/>
+    <ShowCase/>
     <Footer/>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+
 
 import Header from './components/Header.vue';
-import Main from './components/Main.vue';
+import ShowCase from './components/ShowCase.vue';
 import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Main,
+    ShowCase,
     Footer,
   }
 }
