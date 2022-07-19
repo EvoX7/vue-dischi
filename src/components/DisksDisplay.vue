@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row p-5">
-      <h1 class="text-white mb-5 fw-bold">Greatest Hits 1972 - 2018</h1>
+      <h1 class="text-white mb-5 fw-bold">Greatest Albums 1972 - 2018</h1>
   
         <SingleDisk
           class="col-2 mb-4"
