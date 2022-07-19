@@ -1,6 +1,8 @@
 <template>
   <main>
+    <div class="container">
     <DisksDisplay />
+    </div>
   </main>
 </template>
 
@@ -8,7 +10,7 @@
 import DisksDisplay from "./DisksDisplay.vue";
 
 export default {
-  name: 'ShowCase',
+  name: "ShowCase",
   components: {
     DisksDisplay,
   },

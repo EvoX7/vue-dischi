@@ -33,4 +33,9 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+body {
+  background-color: #1a1b4b;
+  
+}
 </style>

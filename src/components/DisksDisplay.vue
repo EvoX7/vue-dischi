@@ -1,13 +1,16 @@
 <template>
-    <div class="container d-flex flex-wrap">
-      <div class="row">
-        <div class="col-12">
-          <h1 class="mt-5">Greatest Hits 1972 - 2018</h1>
-        </div>
-      </div>
-        
-        <SingleDisk class="col-5" v-for="disk in releases" :key="disk" :disk="disk"/>
+  <div>
+    <div class="row p-5">
+      <h1 class="text-white mb-5 fw-bold">Greatest Hits 1972 - 2018</h1>
+  
+        <SingleDisk
+          class="col-2 mb-4"
+          v-for="disk in releases"
+          :key="disk"
+          :disk="disk"
+        />
     </div>
+  </div>
 </template>
 
 <script>
@@ -30,9 +33,8 @@ export default {
       axios
         .get("https://flynn.boolean.careers/exercises/api/array/music")
         .then((result) => {
-            console.log(result.data.response);
+          console.log(result.data.response);
           this.releases = result.data.response;
-          
         });
     },
   },
@@ -43,5 +45,5 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>
