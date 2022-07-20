@@ -56,7 +56,7 @@
 
           <form class="d-flex">
             <input
-              class="form-control me-2"
+              class="form-control me-2 border border-warning"
               type="search"
               placeholder="Search"
               aria-label="Search"
@@ -81,4 +81,5 @@ export default {};
 .brandlogo {
   width: 100px;
 }
+
 </style>

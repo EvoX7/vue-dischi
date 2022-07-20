@@ -3,6 +3,7 @@
     <Header/>
     <ShowCase/>
     <Footer/>
+    
   </div>
 </template>
 

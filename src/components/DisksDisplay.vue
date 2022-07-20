@@ -1,14 +1,25 @@
 <template>
   <div>
-    <div class="row p-5">
-      <h1 class="text-white mb-5 fw-bold">Greatest Albums 1972 - 2018</h1>
-  
+    <div v-if="isLoaded">
+      <Loader />
+    </div>
+    <div v-else>
+      
+      <div class="row p-5">
+        <h1 class="text-white mb-5 fw-bold">Greatest Albums 1972 - 2018</h1>
+
+    <div class="row">
+        <div class="col-8 m-auto mb-5"><Selection /></div>
+      </div>
+
+
         <SingleDisk
           class="col-2 mb-4"
           v-for="disk in releases"
           :key="disk"
           :disk="disk"
         />
+      </div>
     </div>
   </div>
 </template>
@@ -16,15 +27,20 @@
 <script>
 import axios from "axios";
 import SingleDisk from "./SingleDisk.vue";
+import Loader from "./Loader.vue";
+import Selection from "./Selection.vue";
 
 export default {
   name: "DisksDisplay",
   components: {
     SingleDisk,
+    Loader,
+    Selection,
   },
   data: function () {
     return {
       releases: [],
+      isLoaded: true,
     };
   },
 
@@ -35,6 +51,9 @@ export default {
         .then((result) => {
           console.log(result.data.response);
           this.releases = result.data.response;
+          setTimeout(() => {
+            this.isLoaded = false;
+          }, 1700);
         });
     },
   },

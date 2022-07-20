@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div>
-      <h6>Created with &hearts; by Marcello</h6>
+      <h6>Made with &hearts; by Marcello</h6>
     </div>
   </footer>
 </template>
