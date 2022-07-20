@@ -9,7 +9,11 @@
         <h1 class="text-white mb-5 fw-bold">Greatest Albums 1972 - 2018</h1>
 
     <div class="row">
-        <div class="col-8 m-auto mb-5"><Selection /></div>
+        <div class="col-8 m-auto mb-5"><SelectByAuthor /></div>
+      </div>
+
+      <div class="row">
+        <div class="col-8 m-auto mb-5"><SelectByAlbum /></div>
       </div>
 
 
@@ -28,14 +32,16 @@
 import axios from "axios";
 import SingleDisk from "./SingleDisk.vue";
 import Loader from "./Loader.vue";
-import Selection from "./Selection.vue";
+import SelectByAuthor from "./SelectByAuthor.vue";
+import SelectByAlbum from "./SelectByAlbum.vue";
 
 export default {
   name: "DisksDisplay",
   components: {
     SingleDisk,
     Loader,
-    Selection,
+    SelectByAuthor,
+    SelectByAlbum,
   },
   data: function () {
     return {
